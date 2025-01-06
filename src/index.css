@@ -1,0 +1,179 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #262626;
+  justify-content: center;
+  color: #D9D9D9;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+}
+
+header{
+  text-align: center;
+}
+
+header > h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f9f4da;
+}
+
+header > p {
+  font-size: 0.875rem;
+  max-width: 450px;
+  color: #f9f4da;
+}
+.status{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f9f4da;
+  border-radius: 4px;
+  min-height: 60px;
+  margin: 25px 0;
+}
+
+.status.won{
+  background-color: #10a95b;
+}
+
+.status.lost{
+  background-color: #ba2a2a;
+}
+
+.status.farewell{
+  background-color: #7a5ea7;
+  border: 1px dashed #323232;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.status > h2 {
+  font-size: 1.25rem;
+}
+
+.status > p {
+  font-size: 1.25rem;
+  margin: 5px;
+}
+
+.language-chips{
+  max-width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 36px;  
+}
+
+.chip{
+  border-radius: 3px;
+  padding: 4.5px;
+  position: relative;
+}
+
+.language-chips > .chip.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);  
+}
+
+.word{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.word > span{
+  height: 40px;
+  width: 40px;
+  background-color: #323232;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 1.15rem;
+  border-bottom: 1px solid #e9e4da;
+}
+
+.word > span.missed{
+  color: #ec5d49;
+}
+
+.word > span.correct{
+  color: #12ac12;
+}
+
+.keyboard{
+  display: flex;
+  gap: 8px;
+  max-width: 450px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.keyboard > button{
+  height: 35px;
+  width: 35px;
+  background-color: #FCBA29;
+  border: 1px solid #D7D7D7;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.keyboard > button:disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.newGameBtn{
+  border: 1px solid #D7D7D7;
+  background-color: rgb(61, 222, 201);
+  font-size: 18px;
+  display: flex;
+  margin: 20px auto;
+  border-radius: 5px;
+  height: 25px;
+  width: 150px;
+  justify-content: center;
+}
+
+button.correct{
+  background-color: #10a95b;
+}
+
+button.wrong{
+  background-color: #ec5d49;
+}
+
+/* .keyboard > .style2{
+  height: 35px;
+  width: 35px;
+  background-color: #FCBA29;
+  border: 1px solid #D7D7D7;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.keyboard > .style1{
+  height: 35px;
+  width: 35px;
+  background-color: green;
+  border: 1px solid #D7D7D7;
+  border-radius: 3px;
+  cursor: pointer;
+} */
